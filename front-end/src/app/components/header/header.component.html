@@ -1,0 +1,66 @@
+<mat-toolbar class="network" color="accent">
+    <span class="spacer"></span>
+
+    <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <fa-icon [icon]="faFacebook">faFacebook</fa-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <fa-icon [icon]="faInstagram">faInstagram</fa-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <fa-icon [icon]="faTwitter">faTwitter</fa-icon>
+    </button>
+
+    <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <fa-icon [icon]="faYoutube">faYoutube</fa-icon>
+    </button>
+
+    <span class="spacer-2"></span>
+
+    <button mat-button [matMenuTriggerFor]="beforeMenu">Traduzir</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item>Português Brasileiro</button>
+        <!-- <button mat-menu-item>Item 2</button> -->
+    </mat-menu>
+
+    <span class="spacer"></span>
+</mat-toolbar>
+
+
+<mat-toolbar class="nav" color='primary'>
+    <span class="spacer"></span>
+
+    <span><img src="../../../assets/logo-color.png" alt=""></span>
+
+    <span class="spacer-3"></span>
+    <div>
+        <a href="home/#intro" target="_self">
+
+            <button mat-flat-button class="custom-button">Sobre</button>
+        </a>
+        <a href="home/#campaign" target="_self">
+            <button mat-flat-button class="custom-button">Campanha</button>
+        </a>
+        <button mat-flat-button matBadge="!" matBadgeColor="warn" class="custom-button" routerLink="">
+            Faça partes
+        </button>
+
+    </div>
+    <span class="spacer"></span>
+</mat-toolbar>
+
+<mat-card>
+    <div>
+        <span class="spacer"></span>
+        <span class="spacer-3" color="primary"></span>
+        <h1>AJA<br>
+            HOJE<br>
+            PARA<br>
+            UM FUTURO<br>
+            MELHOR<br>
+        </h1>
+        <span class="spacer"></span>
+    </div>
+</mat-card>

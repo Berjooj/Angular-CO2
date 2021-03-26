@@ -1,0 +1,33 @@
+<div class="container"></div>
+<mat-card class="content" [class.mat-elevation-z8]="isActive" color="primary">
+
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-header>
+        <mat-card-title>Faça parte da campanha</mat-card-title>
+    </mat-card-header>
+    <form>
+
+        <mat-form-field appearance="standard">
+            <mat-label>Seu nome</mat-label>
+            <input matInput placeholder="" [(ngModel)]="user.name" name="name" required>
+            <mat-icon matSuffix>account_circle</mat-icon>
+            <mat-hint>Ex.: Roberto</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="standard">
+            <mat-label>Seu email</mat-label>
+            <input matInput placeholder="" type="email" [(ngModel)]="user.email" name="email" required>
+            <mat-icon matSuffix>email</mat-icon>
+            <mat-hint>Ex.: email@email.com</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="standard">
+            <mat-label>Seu telefone</mat-label>
+            <input matInput placeholder="" [(ngModel)]="user.phone" name="phone" required>
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-hint>Ex.:55 51 999999999</mat-hint>
+        </mat-form-field>
+
+    </form>
+    <button type="" mat-raised-button color="primary" (click)="send()">Começar</button>
+</mat-card>

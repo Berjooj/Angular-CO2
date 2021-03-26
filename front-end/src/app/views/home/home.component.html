@@ -1,0 +1,107 @@
+<app-header></app-header>
+
+<mat-card>
+    <mat-card-content class="intro" id="intro">
+        <p>
+            Compensação de carbono: após reduzir a emissão de CO2 ainda é possível compensar as emissões que forem
+            inevitáveis. Uma empresa pode adotar todas as iniciativas de redução acima, ainda assim, suas operações
+            ainda emitirão gases de efeito estufa. Essa emissão inevitável pode ser compensada.
+
+        </p>
+    </mat-card-content>
+
+</mat-card>
+
+<div class="news">
+    <h1>Notícias recentes</h1>
+    <div class="card">
+        <mat-card class="size-2">
+            <img mat-card-image src="'../../../../../assets/new_1.jpg" alt="Photo of a Shiba Inu">
+        </mat-card>
+        <mat-card class="size-1">
+            <!-- <mat-card-header> -->
+            <h2>Para ser verde, iFood vai investir em veículos elétricos e menos plástico</h2>
+            <!-- </mat-card-header> -->
+            <mat-card-content>
+                <p>
+                    Empresa anunciou projeto para produção de motos elétricas e quer que ao menos 50% das entregas sejam
+                    livre de poluentes até 2025
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a href="https://exame.com/invest/esg/para-ser-verde-ifood-vai-investir-em-veiculos-eletricos-e-menos-plastico/"
+                    target="_blank">
+                    <button mat-flat-button color="warn">Saiba mais</button>
+                </a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <hr>
+    <div class="card">
+        <mat-card class="size-1">
+            <h2>Ursos polares serão praticamente extintos até 2100, prevê estudo </h2>
+            <mat-card-content>
+                <p>
+                    Pesquisadores da Universidade de Toronto, no Canadá, projetam que ursos do Ártico enfrentarão falhas
+                    reprodutivas devido a derretimento de calotas </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a target="_blank"
+                    href="https://veja.abril.com.br/mundo/ursos-polares-serao-praticamente-extintos-ate-2100-preve-estudo/">
+                    <button mat-flat-button color="warn">
+                        Saiba mais
+                    </button>
+                </a>
+            </mat-card-actions>
+        </mat-card>
+        <mat-card class="size-2">
+            <img mat-card-image src="'../../../../../assets/new_2.jpg" alt="Photo of a Shiba Inu">
+        </mat-card>
+    </div>
+</div>
+
+<div class="winners">
+    <h1>Tabela classificatória</h1>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> Classificação </th>
+            <td mat-cell *matCellDef="let element; let i = index"> {{i + 1}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Nome </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="points">
+            <th mat-header-cell *matHeaderCellDef> Pontuação </th>
+            <td mat-cell *matCellDef="let element"> {{element.points}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <div class="form">
+        <form class="example-form">
+            <mat-label>Procure seu código de apoiador e ganhe pontos: </mat-label>
+            <mat-form-field appearance="standard">
+                <mat-label>Ex.: email@email.com</mat-label>
+                <input matInput placeholder="" type="email" [(ngModel)]="userSearch.email" name="email"
+                    (input)="verify($event.target.value)" required>
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+        </form>
+        <button mat-raised-button color="primary" (click)="openDialog()" [disabled]="isDisabled">Pesquisar</button>
+    </div>
+</div>
+
+<app-footer></app-footer>

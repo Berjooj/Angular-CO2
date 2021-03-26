@@ -1,0 +1,99 @@
+.intro {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    display: flex;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+mat-card {
+    border-radius: 0;
+    box-shadow: none !important;
+}
+
+.news {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: whitesmoke;
+}
+
+.news h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.size-1 {
+    max-width: 400px;
+}
+
+.size-2 {
+    max-width: 350px;
+}
+
+.card {
+    display: flex;
+    flex-flow: row;
+}
+
+.card mat-card {
+    padding-right: 2rem;
+    background-color: whitesmoke;
+}
+
+mat-card-actions button {
+    width: 100%;
+}
+
+hr {
+    width: 250px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 80%;
+
+    box-shadow: none;
+}
+
+table th {
+    color: whitesmoke;
+    background-color: rgb(68, 68, 68);
+}
+
+.winners {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    margin-top: 3rem;
+    margin-top: 3rem;
+}
+
+.form {
+    display: flex;
+    flex-flow: row;
+    
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.form *:not(.form *:first-child) {
+    margin-left: 1rem;
+}
+

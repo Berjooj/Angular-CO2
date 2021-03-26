@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Olá {{data.name}}</h1>
+<div mat-dialog-content>
+    <p>{{scoreText}}</p>
+    <p>{{positionText}}</p>
+    <p>{{responseText}}
+        <a href="{{link}}" target="_blank">{{link}}</a>
+    </p>
+</div>
+<div mat-dialog-actions>
+    <textarea id="clipboard-example-textarea" [(ngModel)]="link"></textarea>
+    <button mat-button (click)="onNoClick()">Fechar</button>
+    <button mat-button (click)="copyLink()" cdkFocusInitial *ngIf="display"
+        [cdkCopyToClipboard]="link">Copy</button>
+</div>
